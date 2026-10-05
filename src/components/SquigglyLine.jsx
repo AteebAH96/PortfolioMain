@@ -6,38 +6,42 @@ import { useEffect, useRef, useState } from "react";
  */
 export default function SquigglyLine() {
   const pathRef = useRef(null);
-  const [docHeight, setDocHeight] = useState(4000);
+  const [docHeight, setDocHeight] = useState(1);
   const [pathLength, setPathLength] = useState(0);
 
   useEffect(() => {
     const updateSize = () => {
-      const h = Math.max(
-        document.documentElement.scrollHeight,
-        document.body.scrollHeight,
-        4000
-      );
-      setDocHeight(h);
+      const footer = document.querySelector("footer");
+      if (footer) {
+        setDocHeight(Math.ceil(footer.getBoundingClientRect().bottom + window.scrollY));
+      }
     };
 
     updateSize();
+    const observer = new ResizeObserver(updateSize);
+    for (const element of document.querySelectorAll("main, footer")) {
+      observer.observe(element);
+    }
     window.addEventListener("resize", updateSize);
     // Re-check after assets load
     const t = setTimeout(updateSize, 1000);
     return () => {
       window.removeEventListener("resize", updateSize);
+      observer.disconnect();
       clearTimeout(t);
     };
   }, []);
 
   // Generate a hand-drawn wavy path down the full height
   const waveSegment = 500;
-  const segments = Math.ceil(docHeight / waveSegment) + 1;
+  const segments = Math.ceil(docHeight / waveSegment);
   let d = "M 60 0";
   for (let i = 0; i < segments; i++) {
     const startY = i * waveSegment;
-    const cp1Y = startY + waveSegment * 0.33;
-    const cp2Y = startY + waveSegment * 0.66;
-    const endY = (i + 1) * waveSegment;
+    const endY = Math.min((i + 1) * waveSegment, docHeight);
+    const segmentHeight = endY - startY;
+    const cp1Y = startY + segmentHeight * 0.33;
+    const cp2Y = startY + segmentHeight * 0.66;
 
     // Alternate wavy curves
     const cp1X = i % 2 === 0 ? 10 : 110;
@@ -92,7 +96,7 @@ export default function SquigglyLine() {
         height: docHeight,
         pointerEvents: "none",
         zIndex: 1,
-        overflow: "visible",
+        overflow: "hidden",
       }}
       aria-hidden="true"
     >
@@ -100,7 +104,7 @@ export default function SquigglyLine() {
         width="120"
         height={docHeight}
         viewBox={`0 0 120 ${docHeight}`}
-        style={{ overflow: "visible" }}
+        style={{ overflow: "hidden" }}
       >
         {/* Faint guide track */}
         <path
