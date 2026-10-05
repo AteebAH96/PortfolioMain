@@ -37,6 +37,7 @@
   --timeline-track: #e6ebf5;
   --cursor-color: #7160bd;
   --nav-bg: rgba(250, 251, 255, 0.92);
+  --menu-bg: rgba(250, 251, 255, 0.65);
   --code-bg: rgba(167, 139, 250, 0.08);
   --marquee-bg: rgba(167, 139, 250, 0.06);
 }
@@ -73,6 +74,7 @@
   --timeline-track: #1a1528;
   --cursor-color: #a78bfa;
   --nav-bg: rgba(13, 11, 20, 0.85);
+  --menu-bg: rgba(26, 21, 40, 0.65);
   --code-bg: rgba(167, 139, 250, 0.06);
   --marquee-bg: rgba(167, 139, 250, 0.04);
 }
@@ -305,11 +307,20 @@ img {
   right: 0;
   z-index: 1000;
   padding: 16px 24px;
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.4s ease, padding 0.3s ease;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: var(--nav-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
-  transition: background 0.4s ease, padding 0.3s ease;
+  pointer-events: none;
 }
 
 .navbar.scrolled {
@@ -410,7 +421,9 @@ img {
     max-width: 320px;
     height: 100vh;
     flex-direction: column;
-    background: var(--bg-card);
+    background: var(--menu-bg);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
     padding: 80px 32px 32px;
     gap: 24px;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1643,14 +1656,16 @@ img {
     overflow-y: auto;
     padding: 16px 24px 24px;
     gap: 8px;
-    background: var(--bg-card);
+    background: var(--menu-bg);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
     border-bottom: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
   }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; }
-  .nav-links a { display: block; padding: 12px; font-size: 1rem; }
-  .theme-toggle { width: 44px; height: 44px; margin-left: 12px; }
+  .nav-links a { display: block; padding: 12px; font-size: 1rem; text-align: center; }
+  .nav-links .theme-toggle { width: 44px; height: 44px; margin: 0 auto; }
   .about-grid,
   .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .polaroid { width: min(100%, 300px); justify-self: center; }

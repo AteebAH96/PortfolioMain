@@ -40,12 +40,12 @@ export const skills = {
     { name: "JavaScript", icon: "SiJavascript", color: "#F7DF1E" },
     { name: "React.js", icon: "SiReact", color: "#61DAFB" },
     { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
-    { name: "Express.js", icon: "SiExpress", color: "#ffffff" },
+    { name: "Express.js", icon: "SiExpress", color: "var(--text-primary)" },
     { name: "MongoDB", icon: "SiMongodb", color: "#47A248" },
     { name: "VS Code", icon: "VscVscode", color: "#007ACC" },
     { name: "Git", icon: "SiGit", color: "#F05032" },
-    { name: "GitHub", icon: "SiGithub", color: "#ffffff" },
-    { name: "Vercel", icon: "SiVercel", color: "#ffffff" },
+    { name: "GitHub", icon: "SiGithub", color: "var(--text-primary)" },
+    { name: "Vercel", icon: "SiVercel", color: "var(--text-primary)" },
   ],
 };
 
@@ -207,11 +207,11 @@ export const floatingIcons = [
   { name: "HTML5", icon: "SiHtml5", color: "#E34F26", x: 90, y: 45 },
   { name: "CSS3", icon: "SiCss", color: "#1572B6", x: 5, y: 50 },
   { name: "Git", icon: "SiGit", color: "#F05032", x: 50, y: 10 },
-  { name: "GitHub", icon: "SiGithub", color: "#ffffff", x: 45, y: 80 },
+  { name: "GitHub", icon: "SiGithub", color: "var(--text-primary)", x: 45, y: 80 },
   { name: "VS Code", icon: "VscVscode", color: "#007ACC", x: 25, y: 40 },
-  { name: "Express", icon: "SiExpress", color: "#ffffff", x: 60, y: 35 },
+  { name: "Express", icon: "SiExpress", color: "var(--text-primary)", x: 60, y: 35 },
   { name: "Bootstrap", icon: "SiBootstrap", color: "#7952B3", x: 35, y: 60 },
-  { name: "Vercel", icon: "SiVercel", color: "#ffffff", x: 85, y: 80 },
+  { name: "Vercel", icon: "SiVercel", color: "var(--text-primary)", x: 85, y: 80 },
 ];
 
 export const adobeTools = [
