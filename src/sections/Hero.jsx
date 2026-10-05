@@ -42,7 +42,7 @@ export default function Hero({ mode, toggleMode }) {
   }, [titles.length]);
 
   /* On mobile, show fewer icons to prevent clutter */
-  const visibleIcons = isMobile ? floatingIcons.slice(0, 5) : floatingIcons;
+  const visibleIcons = isMobile ? floatingIcons.slice(0, 2) : floatingIcons;
   const visibleAdobe = isMobile ? adobeTools.slice(0, 2) : adobeTools;
 
   return (
@@ -56,8 +56,8 @@ export default function Hero({ mode, toggleMode }) {
         return (
           <FloatingIcon
             key={item.name}
-            x={item.x}
-            y={item.y}
+            x={isMobile ? [8, 78][i] : item.x}
+            y={isMobile ? [16, 82][i] : item.y}
             index={i}
             delay={i * 0.15}
           >
@@ -109,8 +109,8 @@ export default function Hero({ mode, toggleMode }) {
       {visibleAdobe.map((tool, i) => (
         <FloatingIcon
           key={tool.name}
-          x={tool.x}
-          y={tool.y}
+          x={isMobile ? [78, 8][i] : tool.x}
+          y={isMobile ? [16, 82][i] : tool.y}
           index={floatingIcons.length + i}
           delay={i * 0.2 + 0.4}
         >

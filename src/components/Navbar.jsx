@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 /**
@@ -7,6 +7,27 @@ import { FiSun, FiMoon } from "react-icons/fi";
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const closeOutside = (event) => {
+      if (!navRef.current?.contains(event.target)) setMobileOpen(false);
+    };
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 901px)");
+    const closeOnDesktop = () => { if (desktop.matches) setMobileOpen(false); };
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("keydown", closeOnEscape);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("keydown", closeOnEscape);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [mobileOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -31,13 +52,13 @@ export default function Navbar({ theme, toggleTheme }) {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`} role="navigation" aria-label="Main navigation">
+    <nav ref={navRef} className={`navbar ${scrolled ? "scrolled" : ""}`} role="navigation" aria-label="Main navigation">
       <div className="navbar-inner">
         <a href="#" className="nav-logo" aria-label="Home">
           AH<span style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic", fontWeight: 400 }}>.</span>
         </a>
 
-        <ul className={`nav-links ${mobileOpen ? "open" : ""}`}>
+        <ul id="navigation-links" className={`nav-links ${mobileOpen ? "open" : ""}`}>
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} onClick={(e) => handleClick(e, l.href)}>
@@ -61,6 +82,7 @@ export default function Navbar({ theme, toggleTheme }) {
           onClick={() => setMobileOpen((p) => !p)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
+          aria-controls="navigation-links"
         >
           <span />
           <span />

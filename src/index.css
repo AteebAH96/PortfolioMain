@@ -89,6 +89,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
   font-size: 16px;
 }
 
@@ -507,7 +508,8 @@ img {
   position: relative;
   z-index: 5;
   text-align: center;
-  padding: 0 24px;
+  padding: 120px 24px 88px;
+  width: 100%;
   max-width: 800px;
 }
 
@@ -1055,7 +1057,7 @@ img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 24px;
 }
 
@@ -1270,7 +1272,7 @@ img {
    ============================================ */
 .education-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 24px;
 }
 
@@ -1569,4 +1571,149 @@ img {
   z-index: 9999;
   box-shadow: var(--shadow-lg);
   pointer-events: none;
+}
+
+/* Flexible content and touch layouts */
+.about-grid > *,
+.contact-grid > *,
+.projects-grid > *,
+.education-cards > * {
+  min-width: 0;
+}
+
+.section-title,
+.edu-degree,
+.contact-btn > span:last-child {
+  overflow-wrap: anywhere;
+}
+
+.contact-btn > span:last-child { min-width: 0; }
+.skills-group-title svg,
+.skill-chip svg,
+.about-location svg { flex-shrink: 0; }
+.project-tabs,
+.project-links,
+.contact-socials,
+.timeline-header,
+.timeline-title-bar,
+.form-submit { flex-wrap: wrap; }
+.timeline-header { gap: 12px; }
+.timeline-scroll { overflow-x: auto; padding: 8px 3px; }
+.timeline-canvas { min-width: 720px; }
+.timeline-swipe-hint { display: none; }
+.exp-detail-card li::before { content: none; }
+.lightbox-content iframe { display: block; border: 0; }
+.lightbox-portrait {
+  width: min(100%, 360px);
+  height: min(75dvh, 640px);
+  aspect-ratio: auto;
+}
+.lightbox-close {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+:focus-visible { outline: 2px solid var(--accent-lavender); outline-offset: 4px; }
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    padding: 16px 24px 24px;
+    gap: 8px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 12px; font-size: 1rem; }
+  .theme-toggle { width: 44px; height: 44px; margin-left: 12px; }
+  .about-grid,
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .polaroid { width: min(100%, 300px); justify-self: center; }
+  .about-grid { text-align: left; }
+  .section-container { padding: 72px 24px; }
+  .timeline-swipe-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .squiggly-line-container { display: none; }
+  .navbar,
+  .navbar.scrolled { padding: 10px 16px; }
+  .section-container { padding: 56px 20px; }
+  .section-title { font-size: clamp(1.7rem, 7vw, 2.2rem); line-height: 1.2; }
+  .section-subtitle { font-size: 1rem; margin-bottom: 28px; line-height: 1.6; }
+  .hero-section { min-height: 100svh; }
+  .hero-content { padding: 130px 20px 120px; }
+  .hero-name { font-size: clamp(1.85rem, 7.4vw, 3rem); letter-spacing: -0.04em; line-height: 1.2; }
+  .hero-editor-name { max-width: 100%; }
+  .hero-editor-name > span { min-width: 0; }
+  .hero-rotating-title { flex-wrap: wrap; gap: 4px 8px; font-size: 1.15rem; min-height: 3.2em; }
+  .hero-tagline { line-height: 1.7; margin-bottom: 24px; }
+  .hero-buttons { gap: 12px; }
+  .hero-buttons a { padding: 12px 20px; min-height: 48px; }
+  .floating-icon { opacity: 0.6; pointer-events: none; }
+  .skills-group-title { font-size: 1.1rem; line-height: 1.5; }
+  .skill-chips { gap: 8px; margin-bottom: 28px; }
+  .skill-chip { max-width: 100%; padding: 10px 12px; font-size: 0.8rem; }
+  .timeline-wrapper { padding: 20px 12px; }
+  .timeline-title-bar { gap: 8px; font-size: 0.7rem; }
+  .exp-detail-card { padding: 16px 12px; }
+  .project-tabs { gap: 8px; margin-bottom: 24px; }
+  .project-tab { flex: 1; justify-content: center; padding: 12px 10px; min-height: 44px; font-size: 0.8rem; }
+  .projects-grid,
+  .education-cards { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .project-body,
+  .video-body { padding: 18px; }
+  .project-link { min-height: 44px; }
+  .edu-card { padding: 24px 20px; }
+  .contact-btn { padding: 14px 12px; gap: 10px; font-size: 0.85rem; }
+  .form-group input,
+  .form-group textarea { font-size: 16px; }
+  .form-submit { align-self: stretch; }
+  .form-submit button { width: 100%; justify-content: center; min-height: 48px; }
+  .lightbox-overlay { padding: 72px 12px 24px; overflow-y: auto; }
+  .lightbox-close { top: 12px; right: 12px; }
+  .lightbox-content { max-height: calc(100dvh - 100px); }
+  .mode-indicator { bottom: max(12px, env(safe-area-inset-bottom)); right: 12px; min-height: 44px; padding: 10px 14px; font-size: 0.75rem; }
+  .footer { padding: 32px 20px 88px; }
+  .footer > div { flex-direction: column; }
+  .footer-text { line-height: 1.7; }
+  .copy-toast { width: max-content; max-width: calc(100% - 32px); text-align: center; padding: 12px 18px; bottom: 72px; }
+  .loading-screen { padding: 24px 16px; text-align: center; }
+  .loading-rec { font-size: 0.95rem; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .loading-timecode { font-size: clamp(1.6rem, 7vw, 2.5rem); letter-spacing: 2px; }
+  .loading-bar-track { width: min(280px, 100%); }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .skills-drag-hint { display: none !important; }
+  .video-play-btn { opacity: 1; background: rgba(0, 0, 0, 0.15); }
+  .floating-icon { pointer-events: none; }
+  .skill-chip { touch-action: pan-y; }
 }

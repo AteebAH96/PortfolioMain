@@ -1,6 +1,6 @@
 import { FaClapperboard } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { useInView } from "../hooks/useAnimations";
+import { useInView, useCoarsePointer } from "../hooks/useAnimations";
 import { skills } from "../data/data";
 import { getIcon } from "../components/IconMap";
 import AdobeBadge from "../components/AdobeBadge";
@@ -11,6 +11,7 @@ import { FiCode, FiMove } from "react-icons/fi";
  * Every single skill is a draggable interactive sticker chip with authentic icons.
  */
 export default function Skills() {
+  const coarsePointer = useCoarsePointer();
   const [ref, inView] = useInView(0.15);
 
   const chipVariants = {
@@ -39,6 +40,7 @@ export default function Skills() {
               </p>
             </div>
             <div
+              className="skills-drag-hint"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -72,13 +74,14 @@ export default function Skills() {
               variants={chipVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              drag
+              drag={!coarsePointer}
+              style={{ touchAction: coarsePointer ? "pan-y" : "none" }}
               dragElastic={0.4}
               dragTransition={{ bounceStiffness: 400, bounceDamping: 25 }}
               whileHover={{ scale: 1.08, rotate: -2, zIndex: 10 }}
               whileTap={{ scale: 0.95 }}
               whileDrag={{ scale: 1.15, rotate: 4, zIndex: 30 }}
-              title="Click and drag me!"
+              title={coarsePointer ? undefined : "Click and drag me!"}
             >
               <AdobeBadge letters={skill.abbr} size={30} />
               <span style={{ fontWeight: 600 }}>{skill.name}</span>
@@ -102,13 +105,14 @@ export default function Skills() {
                 variants={chipVariants}
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                drag
+                drag={!coarsePointer}
+                style={{ touchAction: coarsePointer ? "pan-y" : "none" }}
                 dragElastic={0.4}
                 dragTransition={{ bounceStiffness: 400, bounceDamping: 25 }}
                 whileHover={{ scale: 1.08, rotate: -2, zIndex: 10 }}
                 whileTap={{ scale: 0.95 }}
                 whileDrag={{ scale: 1.15, rotate: 4, zIndex: 30 }}
-                title="Click and drag me!"
+                title={coarsePointer ? undefined : "Click and drag me!"}
               >
                 {IconComp && (
                   <IconComp

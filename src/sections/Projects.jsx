@@ -24,6 +24,20 @@ export default function Projects({ mode, setMode }) {
     setLightboxVideo(null);
   }, [mode]);
 
+  useEffect(() => {
+    if (!lightboxVideo) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setLightboxVideo(null);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [lightboxVideo]);
+
   const cardVariants = {
     hidden: { opacity: 0, y: 35 },
     visible: (i) => ({
@@ -256,6 +270,7 @@ export default function Projects({ mode, setMode }) {
               exit={{ opacity: 0 }}
               onClick={() => setLightboxVideo(null)}
               role="dialog"
+              aria-modal="true"
               aria-label="Video Player Modal"
             >
               <button
@@ -266,7 +281,7 @@ export default function Projects({ mode, setMode }) {
                 <FiX />
               </button>
               <div
-                className="lightbox-content"
+                className={`lightbox-content ${isTikTokUrl(lightboxVideo.videoUrl) ? "lightbox-portrait" : ""}`}
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   background: "var(--bg-card)",
@@ -285,8 +300,7 @@ export default function Projects({ mode, setMode }) {
                     height="100%"
                     frameBorder="0"
                     allow="autoplay; fullscreen"
-                    style={{ borderRadius: 12, ...(isTikTokUrl(lightboxVideo.videoUrl)
-                      ? { width: "min(100%, 360px)", height: "min(75vh, 640px)" } : {}) }}
+                    style={{ borderRadius: 12 }}
                   />
                 ) : (
                   <div>

@@ -47,7 +47,7 @@ export default function Experience() {
     const width = ((exp.endYear - exp.startYear) / totalYears) * 100;
     return {
       left: `${Math.max(left, 2)}%`,
-      width: `${Math.max(width, 24)}%`,
+      width: `${Math.min(Math.max(width, 24), 100 - Math.max(left, 2))}%`,
     };
   };
 
@@ -91,6 +91,9 @@ export default function Experience() {
             </div>
           </div>
 
+          <p className="timeline-swipe-hint">Swipe the timeline to explore, then tap a clip.</p>
+          <div className="timeline-scroll" tabIndex={0} role="region" aria-label="Career timeline, scroll horizontally to explore">
+          <div className="timeline-canvas">
           {/* Time Ruler */}
           <div className="timeline-ruler">
             {years.map((yr) => (
@@ -104,7 +107,7 @@ export default function Experience() {
           <div
             className="timeline-tracks"
             ref={tracksRef}
-            style={{ position: "relative", minHeight: 180, overflowX: "auto" }}
+            style={{ position: "relative", minHeight: 180 }}
           >
             {/* Playhead red indicator */}
             <div
@@ -236,6 +239,9 @@ export default function Experience() {
                   })}
               </div>
             </div>
+          </div>
+
+          </div>
           </div>
 
           {/* Premiere Pro Clip Inspector / Detail Card */}

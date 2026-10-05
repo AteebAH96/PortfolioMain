@@ -1,5 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 
+export function useCoarsePointer() {
+  const [coarse, setCoarse] = useState(() => window.matchMedia("(pointer: coarse)").matches);
+  useEffect(() => {
+    const query = window.matchMedia("(pointer: coarse)");
+    const update = () => setCoarse(query.matches);
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+  return coarse;
+}
+
 /**
  * Custom hook to track mouse position with smooth lerp.
  * Used for custom cursor and parallax effects.
