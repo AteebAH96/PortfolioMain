@@ -37,7 +37,7 @@
   --timeline-track: #e6ebf5;
   --cursor-color: #7160bd;
   --nav-bg: rgba(250, 251, 255, 0.92);
-  --menu-bg: rgba(255, 255, 255, 0.16);
+  --menu-bg: rgba(250, 251, 255, 0.72);
   --menu-shine: rgba(255, 255, 255, 0.6);
   --menu-border: rgba(255, 255, 255, 0.65);
   --menu-tint: rgba(167, 139, 250, 0.1);
@@ -77,7 +77,7 @@
   --timeline-track: #1a1528;
   --cursor-color: #a78bfa;
   --nav-bg: rgba(13, 11, 20, 0.85);
-  --menu-bg: rgba(26, 21, 40, 0.18);
+  --menu-bg: rgba(26, 21, 40, 0.76);
   --menu-shine: rgba(255, 255, 255, 0.24);
   --menu-border: rgba(255, 255, 255, 0.22);
   --menu-tint: rgba(167, 139, 250, 0.08);
@@ -1674,8 +1674,8 @@ img {
       radial-gradient(ellipse at 100% 100%, var(--menu-tint), transparent 60%),
       linear-gradient(135deg, var(--menu-tint), transparent 50%),
       var(--menu-bg);
-    backdrop-filter: blur(40px) saturate(200%) brightness(1.06);
-    -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.06);
+    backdrop-filter: blur(64px) saturate(125%);
+    -webkit-backdrop-filter: blur(64px) saturate(125%);
     border: 1px solid var(--menu-border);
     border-radius: 32px;
     box-shadow:
