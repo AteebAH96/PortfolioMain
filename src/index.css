@@ -336,12 +336,15 @@ img {
 }
 
 .nav-logo {
+  display: inline-block;
+  flex-shrink: 0;
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 700;
   font-size: 1.8rem;
-  line-height: 1;
-  letter-spacing: -0.06em;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  padding: 2px 8px 2px 4px;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
