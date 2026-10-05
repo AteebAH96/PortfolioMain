@@ -4,7 +4,7 @@ import { personalInfo, floatingIcons, adobeTools } from "../data/data";
 import FloatingIcon from "../components/FloatingIcon";
 import AdobeBadge from "../components/AdobeBadge";
 import { getIcon } from "../components/IconMap";
-import { FiCode, FiFilm, FiArrowDown } from "react-icons/fi";
+import { FiCode, FiArrowDown } from "react-icons/fi";
 import { FaClapperboard } from "react-icons/fa6";
 
 /**
@@ -173,7 +173,7 @@ export default function Hero({ mode, toggleMode }) {
               transition: "all 0.25s ease",
             }}
           >
-            {mode === "developer" ? <FiCode size={13} /> : <FiFilm size={13} />}
+            {mode === "developer" ? <FiCode size={13} /> : <FaClapperboard size={13} />}
             <span>
               Mode:{" "}
               <strong>

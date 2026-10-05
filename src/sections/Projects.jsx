@@ -1,10 +1,11 @@
+import { FaClapperboard } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "../hooks/useAnimations";
 import { projects } from "../data/data";
 import VideoThumbnail from "../components/VideoThumbnail";
 import { getVideoEmbedUrl, isTikTokUrl } from "../utils/video";
-import { FiExternalLink, FiGithub, FiPlay, FiX, FiFilm, FiCode, FiLayers } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiPlay, FiX, FiCode, FiLayers } from "react-icons/fi";
 
 /**
  * Projects section with:
@@ -73,7 +74,7 @@ export default function Projects({ mode, setMode }) {
             onClick={() => setMode("editor")}
             style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
           >
-            <FiFilm size={16} />
+            <FaClapperboard size={16} />
             <span>Video Projects</span>
           </button>
         </div>
@@ -212,7 +213,7 @@ export default function Projects({ mode, setMode }) {
                           color: "#25324b",
                         }}
                       >
-                        <FiFilm size={34} color="var(--accent-pink)" />
+                        <FaClapperboard size={34} color="var(--accent-pink)" />
                         <span className="video-thumb-placeholder" style={{ color: "#25324b" }}>
                           {vid.title}
                         </span>
@@ -302,7 +303,7 @@ export default function Projects({ mode, setMode }) {
                         margin: "0 auto 16px",
                       }}
                     >
-                      <FiFilm size={32} />
+                      <FaClapperboard size={32} />
                     </div>
                     <h3 style={{ fontSize: "1.4rem", color: "var(--text-primary)", marginBottom: 8 }}>
                       {lightboxVideo.title}

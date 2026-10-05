@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
+import { FaClapperboard } from "react-icons/fa6";
 import CustomCursor from "./components/CustomCursor";
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
@@ -93,7 +94,8 @@ export default function App() {
         title="Click to toggle Developer / Video Editor mode"
       >
         <span className={`mode-dot ${mode === "developer" ? "dev" : "editor"}`} />
-        <span>{mode === "developer" ? "⚡ Developer Mode" : "🎬 Editor Mode"}</span>
+        {mode === "editor" && <FaClapperboard size={15} color="var(--accent-pink)" aria-hidden="true" />}
+        <span>{mode === "developer" ? "⚡ Developer Mode" : "Editor Mode"}</span>
       </button>
     </>
   );

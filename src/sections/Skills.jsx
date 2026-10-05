@@ -1,9 +1,10 @@
+import { FaClapperboard } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useInView } from "../hooks/useAnimations";
 import { skills } from "../data/data";
 import { getIcon } from "../components/IconMap";
 import AdobeBadge from "../components/AdobeBadge";
-import { FiFilm, FiCode, FiMove } from "react-icons/fi";
+import { FiCode, FiMove } from "react-icons/fi";
 
 /**
  * Skills section — split into Video and Development groups.
@@ -59,7 +60,7 @@ export default function Skills() {
 
         {/* Video Editing Group */}
         <div className="skills-group-title">
-          <FiFilm size={22} color="var(--accent-pink)" />
+          <FaClapperboard size={22} color="var(--accent-pink)" />
           <span>Video Production & Motion Graphics</span>
         </div>
         <div className="skill-chips">

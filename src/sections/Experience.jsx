@@ -1,8 +1,9 @@
+import { FaClapperboard } from "react-icons/fa6";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "../hooks/useAnimations";
 import { experience } from "../data/data";
-import { FiPlay, FiFilm, FiVolume2, FiSliders, FiClock, FiCheckCircle } from "react-icons/fi";
+import { FiPlay, FiVolume2, FiSliders, FiClock, FiCheckCircle } from "react-icons/fi";
 
 /**
  * Experience section styled like an authentic Adobe Premiere Pro Timeline.
@@ -148,7 +149,7 @@ export default function Experience() {
             <div className="timeline-track" style={{ minHeight: 68 }}>
               <div className="track-label">
                 <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                  <FiFilm size={12} />
+                  <FaClapperboard size={12} />
                   <span style={{ fontWeight: 800 }}>V1</span>
                 </div>
                 <div style={{ display: "flex", gap: 3, marginTop: 4 }}>

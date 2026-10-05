@@ -1529,7 +1529,15 @@ img {
    Film-strip accents (Video Editor mode)
    ============================================ */
 [data-mode="editor"] .section-title::before {
-  content: "🎬 ";
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.3em;
+  vertical-align: baseline;
+  background: var(--accent-pink);
+  mask: url("/video-icon.svg") center / contain no-repeat;
+  -webkit-mask: url("/video-icon.svg") center / contain no-repeat;
 }
 
 [data-mode="editor"] .project-card,
