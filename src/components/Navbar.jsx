@@ -55,7 +55,7 @@ export default function Navbar({ theme, toggleTheme }) {
     <nav ref={navRef} className={`navbar ${scrolled ? "scrolled" : ""}`} role="navigation" aria-label="Main navigation">
       <div className="navbar-inner">
         <a href="#" className="nav-logo" aria-label="Home">
-          AH<span style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic", fontWeight: 400 }}>.</span>
+          AH
         </a>
 
         <ul id="navigation-links" className={`nav-links ${mobileOpen ? "open" : ""}`}>

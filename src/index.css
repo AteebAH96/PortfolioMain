@@ -336,8 +336,12 @@ img {
 }
 
 .nav-logo {
-  font-weight: 800;
-  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: -0.06em;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
