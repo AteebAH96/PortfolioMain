@@ -7,15 +7,23 @@ import { FiSun, FiMoon } from "react-icons/fi";
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navRef = useRef(null);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
     if (!mobileOpen) return;
+    // Close outside the glass card, while allowing the toggle to handle itself.
     const closeOutside = (event) => {
-      if (!navRef.current?.contains(event.target)) setMobileOpen(false);
+      if (
+        !menuRef.current?.contains(event.target) &&
+        !toggleRef.current?.contains(event.target)
+      ) setMobileOpen(false);
     };
     const closeOnEscape = (event) => {
-      if (event.key === "Escape") setMobileOpen(false);
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        toggleRef.current?.focus();
+      }
     };
     const desktop = window.matchMedia("(min-width: 901px)");
     const closeOnDesktop = () => { if (desktop.matches) setMobileOpen(false); };
@@ -52,13 +60,13 @@ export default function Navbar({ theme, toggleTheme }) {
   };
 
   return (
-    <nav ref={navRef} className={`navbar ${scrolled ? "scrolled" : ""}`} role="navigation" aria-label="Main navigation">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`} role="navigation" aria-label="Main navigation">
       <div className="navbar-inner">
         <a href="#" className="nav-logo" aria-label="Home">
           AH
         </a>
 
-        <ul id="navigation-links" className={`nav-links ${mobileOpen ? "open" : ""}`}>
+        <ul ref={menuRef} id="navigation-links" className={`nav-links ${mobileOpen ? "open" : ""}`}>
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} onClick={(e) => handleClick(e, l.href)}>
@@ -78,6 +86,7 @@ export default function Navbar({ theme, toggleTheme }) {
         </ul>
 
         <button
+          ref={toggleRef}
           className={`nav-toggle ${mobileOpen ? "open" : ""}`}
           onClick={() => setMobileOpen((p) => !p)}
           aria-label="Toggle menu"
