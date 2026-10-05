@@ -1574,6 +1574,9 @@ img {
 }
 
 /* Flexible content and touch layouts */
+#about,
+#contact { overflow-x: clip; }
+
 .about-grid > *,
 .contact-grid > *,
 .projects-grid > *,
