@@ -79,7 +79,7 @@ export default function Contact() {
             <button className="contact-btn" onClick={copyEmail} aria-label="Copy email address">
               <span
                 className="contact-btn-icon"
-                style={{ background: "rgba(167,139,250,0.15)", color: "var(--accent-lavender)" }}
+                style={{ background: "rgba(66,106,156,0.15)", color: "var(--accent-lavender)" }}
               >
                 {copied ? <FiCheck /> : <FiCopy />}
               </span>
@@ -117,7 +117,7 @@ export default function Contact() {
             <a href={`tel:${personalInfo.phone}`} className="contact-btn" aria-label="Call">
               <span
                 className="contact-btn-icon"
-                style={{ background: "rgba(255,107,157,0.15)", color: "var(--accent-pink)" }}
+                style={{ background: "rgba(66,106,156,0.15)", color: "var(--accent-pink)" }}
               >
                 <FiPhone />
               </span>

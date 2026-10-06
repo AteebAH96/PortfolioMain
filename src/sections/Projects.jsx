@@ -51,8 +51,8 @@ export default function Projects({ mode, setMode }) {
   const gradientThumbnails = [
     "linear-gradient(135deg, #edf2ff 0%, #e1e8fc 50%, #d9def9 100%)",
     "linear-gradient(135deg, #effaf5 0%, #def3e9 50%, #d4ece6 100%)",
-    "linear-gradient(135deg, #f7f1ff 0%, #eee3fa 50%, #e4ddf7 100%)",
-    "linear-gradient(135deg, #fff4f4 0%, #fce5eb 50%, #f5dce7 100%)",
+    "linear-gradient(135deg, #f1f6fc 0%, #e3edf8 50%, #d7e6f4 100%)",
+    "linear-gradient(135deg, #f2f8fa 0%, #e2eff3 50%, #d6e7ee 100%)",
   ];
 
   return (
@@ -285,7 +285,7 @@ export default function Projects({ mode, setMode }) {
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   background: "var(--bg-card)",
-                  border: "1px solid rgba(167, 139, 250, 0.2)",
+                  border: "1px solid rgba(66, 106, 156, 0.2)",
                   padding: embedUrl ? 0 : 36,
                   textAlign: "center",
                   flexDirection: "column",
@@ -309,7 +309,7 @@ export default function Projects({ mode, setMode }) {
                         width: 70,
                         height: 70,
                         borderRadius: "50%",
-                        background: "rgba(255, 107, 157, 0.15)",
+                        background: "rgba(66, 106, 156, 0.15)",
                         color: "var(--accent-pink)",
                         display: "flex",
                         alignItems: "center",
