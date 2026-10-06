@@ -74,29 +74,31 @@ export default function Navbar({ theme, toggleTheme }) {
               </a>
             </li>
           ))}
-          <li>
-            <button
-              className="theme-toggle"
-              onClick={toggleTheme}
-              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            >
-              {theme === "light" ? <FiMoon /> : <FiSun />}
-            </button>
-          </li>
         </ul>
 
-        <button
-          ref={toggleRef}
-          className={`nav-toggle ${mobileOpen ? "open" : ""}`}
-          onClick={() => setMobileOpen((p) => !p)}
-          aria-label="Toggle menu"
-          aria-expanded={mobileOpen}
-          aria-controls="navigation-links"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="nav-actions">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+          >
+            {theme === "light" ? <FiMoon /> : <FiSun />}
+          </button>
+          <button
+            type="button"
+            ref={toggleRef}
+            className={`nav-toggle ${mobileOpen ? "open" : ""}`}
+            onClick={() => setMobileOpen((p) => !p)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="navigation-links"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </nav>
   );
