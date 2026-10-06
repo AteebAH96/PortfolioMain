@@ -49,10 +49,10 @@ export default function Projects({ mode, setMode }) {
 
   // Modern gradient palettes for placeholder card thumbnails
   const gradientThumbnails = [
-    "linear-gradient(135deg, #edf2ff 0%, #e1e8fc 50%, #d9def9 100%)",
-    "linear-gradient(135deg, #effaf5 0%, #def3e9 50%, #d4ece6 100%)",
-    "linear-gradient(135deg, #f1f6fc 0%, #e3edf8 50%, #d7e6f4 100%)",
-    "linear-gradient(135deg, #f2f8fa 0%, #e2eff3 50%, #d6e7ee 100%)",
+    "linear-gradient(135deg, #f2f4e6 0%, #e1e7c3 50%, #d4de95 100%)",
+    "linear-gradient(135deg, #f1f4e9 0%, #e1e8ce 50%, #cbd6af 100%)",
+    "linear-gradient(135deg, #f5f5e9 0%, #e8ebd5 50%, #bac095 100%)",
+    "linear-gradient(135deg, #f4f6df 0%, #e3e9bb 50%, #d4de95 100%)",
   ];
 
   return (
@@ -134,7 +134,7 @@ export default function Projects({ mode, setMode }) {
                         }}
                       >
                         <FiLayers size={36} color="var(--accent-lavender)" />
-                        <span className="project-thumb-placeholder" style={{ color: "#25324b" }}>
+                        <span className="project-thumb-placeholder" style={{ color: "#3d4127" }}>
                           {proj.title}
                         </span>
                         <span
@@ -224,11 +224,11 @@ export default function Projects({ mode, setMode }) {
                           flexDirection: "column",
                           alignItems: "center",
                           gap: 6,
-                          color: "#25324b",
+                          color: "#3d4127",
                         }}
                       >
                         <FaClapperboard size={34} color="var(--accent-pink)" />
-                        <span className="video-thumb-placeholder" style={{ color: "#25324b" }}>
+                        <span className="video-thumb-placeholder" style={{ color: "#3d4127" }}>
                           {vid.title}
                         </span>
                         <span
@@ -285,7 +285,7 @@ export default function Projects({ mode, setMode }) {
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   background: "var(--bg-card)",
-                  border: "1px solid rgba(66, 106, 156, 0.2)",
+                  border: "1px solid rgba(99, 107, 47, 0.2)",
                   padding: embedUrl ? 0 : 36,
                   textAlign: "center",
                   flexDirection: "column",
@@ -309,7 +309,7 @@ export default function Projects({ mode, setMode }) {
                         width: 70,
                         height: 70,
                         borderRadius: "50%",
-                        background: "rgba(66, 106, 156, 0.15)",
+                        background: "rgba(99, 107, 47, 0.15)",
                         color: "var(--accent-pink)",
                         display: "flex",
                         alignItems: "center",

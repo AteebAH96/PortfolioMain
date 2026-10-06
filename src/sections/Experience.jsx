@@ -171,7 +171,7 @@ export default function Experience() {
                         className="timeline-clip"
                         style={{
                           ...getClipStyle(exp),
-                          background: "linear-gradient(135deg, #426a9c 0%, #304f75 100%)",
+                          background: "linear-gradient(135deg, #636b2f 0%, #3d4127 100%)",
                           outline: isSelected ? "2px solid #ffffff" : "none",
                           boxShadow: isSelected ? "0 0 15px rgba(255,255,255,0.4)" : "none",
                           cursor: "pointer",
@@ -217,7 +217,7 @@ export default function Experience() {
                         className="timeline-clip"
                         style={{
                           ...getClipStyle(exp),
-                          background: "linear-gradient(135deg, #397586 0%, #285563 100%)",
+                          background: "linear-gradient(135deg, #515f3b 0%, #343e27 100%)",
                           outline: isSelected ? "2px solid #ffffff" : "none",
                           boxShadow: isSelected ? "0 0 15px rgba(255,255,255,0.4)" : "none",
                           cursor: "pointer",
@@ -263,7 +263,7 @@ export default function Experience() {
                           width: 10,
                           height: 10,
                           borderRadius: "50%",
-                          background: activeExp.track === "video" ? "#426a9c" : "#397586",
+                          background: activeExp.track === "video" ? "#636b2f" : "#515f3b",
                         }}
                       />
                       <h3 style={{ fontSize: "1.25rem", margin: 0, fontWeight: 700 }}>
@@ -280,9 +280,9 @@ export default function Experience() {
                       fontSize: "0.8rem",
                       color: "var(--accent-lavender)",
                       padding: "4px 12px",
-                      background: "rgba(66, 106, 156, 0.1)",
+                      background: "rgba(99, 107, 47, 0.1)",
                       borderRadius: 20,
-                      border: "1px solid rgba(66, 106, 156, 0.2)",
+                      border: "1px solid rgba(99, 107, 47, 0.2)",
                     }}
                   >
                     <FiClock size={12} style={{ marginRight: 6, verticalAlign: "middle" }} />
