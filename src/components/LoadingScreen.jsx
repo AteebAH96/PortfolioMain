@@ -79,7 +79,7 @@ export default function LoadingScreen({ onComplete }) {
               fontFamily: "'JetBrains Mono', monospace",
             }}
           >
-            INITIALIZING WORKSPACE {percent}%
+            Welcome to my portfolio {percent}%
           </div>
 
           {/* Loading bar */}
