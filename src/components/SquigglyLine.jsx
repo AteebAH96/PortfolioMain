@@ -95,7 +95,6 @@ export default function SquigglyLine() {
         width: 120,
         height: docHeight,
         pointerEvents: "none",
-        zIndex: 1,
         overflow: "hidden",
       }}
       aria-hidden="true"

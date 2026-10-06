@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { useInView } from "../hooks/useAnimations";
 import { personalInfo } from "../data/data";
 import profilePhoto from "../assets/Picsart_26-06-18_10-21-36-838.jpg";
-import { FiMapPin, FiExternalLink, FiCheckCircle } from "react-icons/fi";
+import { FiMapPin, FiCheckCircle } from "react-icons/fi";
 
 /**
  * About section styled with a realistic sticker/polaroid photo frame,
- * washi tape decal, highlight badges, and existing portfolio reference.
+ * washi tape decal and highlight badges.
  */
 export default function About() {
   const [ref, inView] = useInView(0.2);
@@ -110,27 +110,6 @@ export default function About() {
                 <span style={{ fontWeight: 600 }}>{personalInfo.location}</span>
               </div>
 
-              {personalInfo.portfolio && (
-                <a
-                  href={personalInfo.portfolio}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                    padding: "8px 16px",
-                    borderRadius: 20,
-                    background: "var(--code-bg)",
-                    fontSize: "0.85rem",
-                  }}
-                  aria-label="View existing portfolio on Vercel"
-                >
-                  <FiExternalLink size={14} />
-                  <span>Existing Portfolio</span>
-                </a>
-              )}
             </div>
           </motion.div>
         </div>

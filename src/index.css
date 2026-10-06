@@ -207,6 +207,8 @@ img {
   margin: 0 auto;
   padding: 100px 24px;
   position: relative;
+  /* Keep text, photos and cards above the decorative page line. */
+  z-index: 1;
 }
 
 .section-title {
@@ -1492,6 +1494,13 @@ img {
 .footer-text {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+/* Foreground content stays above the line through the end of the page. */
+.marquee-container,
+.footer > div {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-heart {
