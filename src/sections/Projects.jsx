@@ -63,7 +63,7 @@ export default function Projects({ mode, setMode }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Featured Projects</h2>
+          <h2 className="section-title"><span>Featured</span>{" "}<em>Projects</em></h2>
           <p className="section-subtitle">
             Curated web applications & video edits
           </p>

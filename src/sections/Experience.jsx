@@ -59,7 +59,7 @@ export default function Experience() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Experience</h2>
+          <h2 className="section-title"><span>My</span>{" "}<em>Experience</em></h2>
           <p className="section-subtitle">
             Timeline of professional roles & client projects
           </p>

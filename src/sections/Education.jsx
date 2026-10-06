@@ -17,7 +17,7 @@ export default function Education() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Education</h2>
+          <h2 className="section-title"><span>My</span>{" "}<em>Education</em></h2>
           <p className="section-subtitle">Academic background</p>
         </motion.div>
 

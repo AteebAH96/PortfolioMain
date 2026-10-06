@@ -34,7 +34,7 @@ export default function Skills() {
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 12 }}>
             <div>
-              <h2 className="section-title">Skills & Toolset</h2>
+              <h2 className="section-title"><span>Skills &</span>{" "}<em>Toolset</em></h2>
               <p className="section-subtitle">
                 My everyday development stack and creative suite
               </p>

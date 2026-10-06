@@ -26,7 +26,7 @@ export default function About() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title"><span>About</span>{" "}<em>Me</em></h2>
           <p className="section-subtitle">
             Bridging technical code & cinematic storytelling
           </p>
