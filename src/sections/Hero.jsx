@@ -141,13 +141,16 @@ export default function Hero({ mode, toggleMode }) {
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
             <h1 className="hero-name">
-              <span className={mode === "editor" ? "hero-editor-name" : "hero-name-gradient"}>
-                {mode === "editor" && <FaClapperboard className="hero-video-icon" aria-hidden="true" />}
-                <span className="hero-name-words">
-                  <span>{personalInfo.name.split(" ")[0]}</span>{" "}
-                  <em>{personalInfo.name.split(" ").slice(1).join(" ")}</em>
+              {mode === "developer" ? (
+                <span className="hero-name-gradient">
+                  &lt;{personalInfo.name} /&gt;
                 </span>
-              </span>
+              ) : (
+                <span className="hero-editor-name">
+                  <FaClapperboard className="hero-video-icon" aria-hidden="true" />
+                  <span className="hero-name-gradient">{personalInfo.name}</span>
+                </span>
+              )}
             </h1>
           </motion.div>
 

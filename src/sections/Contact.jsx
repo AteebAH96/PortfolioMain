@@ -61,7 +61,7 @@ export default function Contact() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title"><span>Get In</span>{" "}<em>Touch</em></h2>
+          <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
             Let's work together — reach out anytime
           </p>

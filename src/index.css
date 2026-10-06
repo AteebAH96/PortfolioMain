@@ -210,26 +210,13 @@ img {
 }
 
 .section-title {
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 1.15;
   margin-bottom: 1rem;
-  color: var(--text-primary);
-}
-
-.section-title > span,
-.hero-name-words > span {
-  text-transform: uppercase;
-}
-
-.section-title em,
-.hero-name-words em {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.055em;
-  color: inherit;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-subtitle {
@@ -555,18 +542,17 @@ img {
 .hero-name {
   font-family: "Inter", sans-serif;
   font-size: clamp(2.8rem, 8vw, 5.5rem);
-  font-weight: 800;
-  line-height: 1.15;
+  font-weight: 900;
+  line-height: 1.05;
   margin-bottom: 8px;
   letter-spacing: -2px;
 }
 
 .hero-name-gradient {
-  color: var(--text-primary);
-}
-
-.hero-name-words {
-  display: inline-block;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-editor-name {
@@ -595,18 +581,11 @@ img {
   gap: 8px;
 }
 
-.hero-rotating-title > span:first-child {
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.04em;
-}
-
 .hero-italic {
   font-family: "Playfair Display", serif;
   font-style: italic;
-  font-weight: 400;
-  font-size: 1.18em;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--accent-pink);
 }
 
 .hero-tagline {
