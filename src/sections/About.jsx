@@ -50,7 +50,7 @@ export default function About() {
                 left: "30%",
                 width: 100,
                 height: 24,
-                background: "rgba(186, 192, 149, 0.65)",
+                background: "rgba(187, 211, 237, 0.65)",
                 transform: "rotate(-3deg)",
                 boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
                 zIndex: 10,

@@ -65,7 +65,7 @@ export default function LoadingScreen({ onComplete }) {
           </div>
 
           {/* Timecode counter */}
-          <div className="loading-timecode" style={{ textShadow: "0 0 20px rgba(99, 107, 47, 0.4)" }}>
+          <div className="loading-timecode" style={{ textShadow: "0 0 20px rgba(66, 106, 156, 0.4)" }}>
             {timecode}
           </div>
 

@@ -5,75 +5,75 @@
    CSS Custom Properties — Theme Colours
    ============================================ */
 :root {
-  /* Olive & Sage — light mode */
+  /* Powder Blue — light mode */
   color-scheme: light;
-  --bg-primary: #f7f8ee;
-  --bg-secondary: #e9ecda;
-  --bg-card: #fdfef8;
-  --bg-card-hover: #eef1dc;
-  --text-primary: #3d4127;
-  --text-secondary: #51573e;
-  --text-muted: #60664d;
+  --bg-primary: #f5f8fc;
+  --bg-secondary: #eaf1f8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #edf4fb;
+  --text-primary: #253349;
+  --text-secondary: #50627a;
+  --text-muted: #61728a;
   --text-on-accent: #ffffff;
-  --accent-pink: #636b2f;
-  --accent-lavender: #636b2f;
-  --accent-blue: #535c2d;
-  --accent-cyan: #3d4127;
-  --accent-gradient: linear-gradient(135deg, #636b2f, #535c2d, #3d4127);
-  --hero-gradient: linear-gradient(135deg, #fafbf4 0%, #edf0da 35%, #e2e8be 65%, #f0f3dd 100%);
-  --border-color: rgba(99, 107, 47, 0.16);
-  --shadow-sm: 0 2px 8px rgba(61, 65, 39, 0.05);
-  --shadow-md: 0 8px 24px rgba(61, 65, 39, 0.08);
-  --shadow-lg: 0 16px 48px rgba(61, 65, 39, 0.12);
+  --accent-pink: #567594;
+  --accent-lavender: #426a9c;
+  --accent-blue: #3b6593;
+  --accent-cyan: #397586;
+  --accent-gradient: linear-gradient(135deg, #426a9c, #3b6593, #397586);
+  --hero-gradient: linear-gradient(135deg, #f8fafc 0%, #eaf2fb 35%, #e4eef9 65%, #edf6f9 100%);
+  --border-color: rgba(66, 106, 156, 0.16);
+  --shadow-sm: 0 2px 8px rgba(37, 51, 73, 0.05);
+  --shadow-md: 0 8px 24px rgba(37, 51, 73, 0.08);
+  --shadow-lg: 0 16px 48px rgba(37, 51, 73, 0.12);
   --glass-bg: rgba(255, 255, 255, 0.74);
   --glass-border: rgba(255, 255, 255, 0.5);
-  --grid-color: rgba(99, 107, 47, 0.07);
-  --timeline-bg: #f0f2e2;
-  --timeline-track: #e0e5c9;
-  --cursor-color: #636b2f;
-  --nav-bg: rgba(247, 248, 238, 0.92);
-  --menu-bg: rgba(247, 248, 238, 0.76);
+  --grid-color: rgba(66, 106, 156, 0.07);
+  --timeline-bg: #f0f5fb;
+  --timeline-track: #e1eaf5;
+  --cursor-color: #426a9c;
+  --nav-bg: rgba(245, 248, 252, 0.92);
+  --menu-bg: rgba(245, 248, 252, 0.76);
   --menu-shine: rgba(255, 255, 255, 0.6);
   --menu-border: rgba(255, 255, 255, 0.65);
-  --menu-tint: rgba(99, 107, 47, 0.1);
-  --code-bg: rgba(99, 107, 47, 0.07);
-  --marquee-bg: rgba(99, 107, 47, 0.05);
+  --menu-tint: rgba(66, 106, 156, 0.1);
+  --code-bg: rgba(66, 106, 156, 0.07);
+  --marquee-bg: rgba(66, 106, 156, 0.05);
 }
 
 [data-theme="dark"] {
-  /* Olive & Sage — dark mode */
+  /* Powder Blue — slate night mode */
   color-scheme: dark;
-  --bg-primary: #202318;
-  --bg-secondary: #2a2e1e;
-  --bg-card: #333821;
-  --bg-card-hover: #3d4127;
-  --text-primary: #f3f5e5;
-  --text-secondary: #c8cfb0;
-  --text-muted: #b1b89a;
-  --text-on-accent: #202318;
-  --accent-pink: #bac095;
-  --accent-lavender: #d4de95;
-  --accent-blue: #c5d08b;
-  --accent-cyan: #bac095;
-  --accent-gradient: linear-gradient(135deg, #d4de95, #c5d08b, #bac095);
-  --hero-gradient: linear-gradient(135deg, #2a2e1e 0%, #30351f 35%, #353b23 65%, #2b301f 100%);
-  --border-color: rgba(212, 222, 149, 0.18);
+  --bg-primary: #111b29;
+  --bg-secondary: #182536;
+  --bg-card: #1e2e42;
+  --bg-card-hover: #273a50;
+  --text-primary: #edf4fc;
+  --text-secondary: #b7c7da;
+  --text-muted: #9aadc4;
+  --text-on-accent: #111b29;
+  --accent-pink: #adc3dc;
+  --accent-lavender: #9bbfe3;
+  --accent-blue: #8eb8e5;
+  --accent-cyan: #92c9d5;
+  --accent-gradient: linear-gradient(135deg, #9bbfe3, #8eb8e5, #92c9d5);
+  --hero-gradient: linear-gradient(135deg, #182536 0%, #15243a 35%, #142b40 65%, #19303c 100%);
+  --border-color: rgba(155, 191, 227, 0.18);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.4);
-  --glass-bg: rgba(51, 56, 33, 0.74);
-  --glass-border: rgba(212, 222, 149, 0.14);
-  --grid-color: rgba(212, 222, 149, 0.05);
-  --timeline-bg: #262b1c;
-  --timeline-track: #3d4127;
-  --cursor-color: #d4de95;
-  --nav-bg: rgba(32, 35, 24, 0.88);
-  --menu-bg: rgba(51, 56, 33, 0.78);
+  --glass-bg: rgba(30, 46, 66, 0.74);
+  --glass-border: rgba(155, 191, 227, 0.14);
+  --grid-color: rgba(155, 191, 227, 0.05);
+  --timeline-bg: #152131;
+  --timeline-track: #23364c;
+  --cursor-color: #9bbfe3;
+  --nav-bg: rgba(17, 27, 41, 0.88);
+  --menu-bg: rgba(30, 46, 66, 0.78);
   --menu-shine: rgba(255, 255, 255, 0.24);
   --menu-border: rgba(255, 255, 255, 0.22);
-  --menu-tint: rgba(212, 222, 149, 0.1);
-  --code-bg: rgba(212, 222, 149, 0.08);
-  --marquee-bg: rgba(212, 222, 149, 0.06);
+  --menu-tint: rgba(155, 191, 227, 0.1);
+  --code-bg: rgba(155, 191, 227, 0.08);
+  --marquee-bg: rgba(155, 191, 227, 0.06);
 }
 
 /* ============================================
@@ -157,7 +157,7 @@ img {
 .custom-cursor.hovering {
   width: 44px;
   height: 44px;
-  background: rgba(99, 107, 47, 0.15);
+  background: rgba(66, 106, 156, 0.15);
   border-color: var(--accent-pink);
 }
 
@@ -613,12 +613,12 @@ img {
   background: var(--accent-gradient);
   color: var(--text-on-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 20px rgba(99, 107, 47, 0.3);
+  box-shadow: 0 4px 20px rgba(66, 106, 156, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(99, 107, 47, 0.45);
+  box-shadow: 0 8px 30px rgba(66, 106, 156, 0.45);
 }
 
 .btn-secondary {
@@ -636,7 +636,7 @@ img {
 
 .btn-secondary:hover {
   border-color: var(--accent-lavender);
-  background: rgba(99, 107, 47, 0.1);
+  background: rgba(66, 106, 156, 0.1);
   transform: translateY(-2px);
 }
 
@@ -856,7 +856,7 @@ img {
   padding: 32px 24px;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(99, 107, 47, 0.1);
+  border: 1px solid rgba(66, 106, 156, 0.1);
 }
 
 .timeline-header {
@@ -890,7 +890,7 @@ img {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.65rem;
   color: var(--text-secondary);
-  border-left: 1px solid rgba(99, 107, 47, 0.1);
+  border-left: 1px solid rgba(66, 106, 156, 0.1);
   padding-left: 6px;
   padding-top: 4px;
   padding-bottom: 8px;
@@ -916,7 +916,7 @@ img {
   font-size: 0.75rem;
   color: var(--text-muted);
   padding-right: 12px;
-  border-right: 1px solid rgba(99, 107, 47, 0.1);
+  border-right: 1px solid rgba(66, 106, 156, 0.1);
 }
 
 .track-content {
@@ -1016,7 +1016,7 @@ img {
   margin-top: 24px;
   padding: 20px 24px;
   background: var(--bg-card);
-  border: 1px solid rgba(99, 107, 47, 0.1);
+  border: 1px solid rgba(66, 106, 156, 0.1);
   border-radius: 12px;
 }
 
@@ -1078,7 +1078,7 @@ img {
   background: var(--accent-gradient);
   color: var(--text-on-accent);
   border-color: transparent;
-  box-shadow: 0 4px 16px rgba(99, 107, 47, 0.3);
+  box-shadow: 0 4px 16px rgba(66, 106, 156, 0.3);
 }
 
 .projects-grid {
@@ -1467,7 +1467,7 @@ img {
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent-lavender);
-  box-shadow: 0 0 0 3px rgba(99, 107, 47, 0.15);
+  box-shadow: 0 0 0 3px rgba(66, 106, 156, 0.15);
 }
 
 .form-group textarea {
@@ -1679,8 +1679,8 @@ img {
     border: 1px solid var(--menu-border);
     border-radius: 32px;
     box-shadow:
-      0 24px 60px rgba(61, 65, 39, 0.2),
-      0 4px 12px rgba(61, 65, 39, 0.08),
+      0 24px 60px rgba(37, 51, 73, 0.2),
+      0 4px 12px rgba(37, 51, 73, 0.08),
       inset 0 2px 3px var(--menu-shine),
       inset 2px 0 3px var(--menu-shine),
       inset 0 -2px 4px rgba(255, 255, 255, 0.16),
@@ -1709,7 +1709,7 @@ img {
   .nav-links a:hover,
   .nav-links a:focus-visible {
     background: var(--menu-tint);
-    box-shadow: inset 0 1px 0 var(--menu-shine), 0 3px 10px rgba(61, 65, 39, 0.06);
+    box-shadow: inset 0 1px 0 var(--menu-shine), 0 3px 10px rgba(37, 51, 73, 0.06);
   }
   .nav-links a::after { display: none; }
   .nav-actions .theme-toggle { width: 44px; height: 44px; }
