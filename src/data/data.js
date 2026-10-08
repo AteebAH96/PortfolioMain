@@ -137,57 +137,57 @@ export const projects = {
   video: [
     {
       id: 1,
-      title: "VIDEO PROJECT 1",
-      description: "Social media reel with cinematic transitions.",
+      title: "Avengers: Doomsday — Cinematic Fan Edit",
+      description: "High-energy fan edit for the upcoming Avengers: Doomsday. Dramatic pacing, cinematic colour grading and beat-synced transitions.",
       thumbnail: "https://i.ytimg.com/vi/G6OUcYP8fKY/hqdefault.jpg", // YouTube video thumbnail
       videoUrl: "https://www.youtube.com/embed/G6OUcYP8fKY", // YouTube embed URL
     },
     {
       id: 2,
-      title: "VIDEO PROJECT 2",
-      description: "Promotional video for brand campaign.",
+      title: "Marvel's Spider-Man 2 — Insomniac Games Edit",
+      description: "Cinematic gameplay edit from Insomniac's Spider-Man 2. Smooth transitions, punchy sound design and movie-style colour grading.",
       thumbnail: "https://i.ytimg.com/vi/LTj6bx5Ot9U/hqdefault.jpg",
       videoUrl: "https://www.youtube.com/embed/LTj6bx5Ot9U",
     },
     {
       id: 3,
-      title: "VIDEO PROJECT 3",
-      description: "Motion graphics intro sequence.",
+      title: "The Batman — Dark Cinematic Edit",
+      description: "Moody, atmospheric edit of The Batman. Deep shadows, teal-and-orange grade and tension-driven pacing.",
       thumbnail: "https://i.ytimg.com/vi/pGVjEUnB9XQ/hqdefault.jpg",
       videoUrl: "https://www.youtube.com/embed/pGVjEUnB9XQ",
     },
     {
       id: 4,
-      title: "VIDEO PROJECT 4",
-      description: "Event highlight reel.",
+      title: "Spider-Man: Brand New Day — Trailer Edit",
+      description: "Fan-made trailer-style edit for the upcoming Spider-Man: Brand New Day. Fast cuts, dynamic motion graphics and synced audio.",
       thumbnail: "https://i.ytimg.com/vi/Y0jr7_T937c/hqdefault.jpg",
       videoUrl: "https://www.youtube.com/embed/Y0jr7_T937c",
     },
     {
       id: 5,
-      title: "TIKTOK PROJECT 1",
-      description: "Creative TikTok edit.",
+      title: "PUBG Mobile Lobby Edit — Vol. 1",
+      description: "Cinematic lobby showcase with smooth camera flow, glow effects and beat-synced transitions.",
       thumbnail: "/thumbnails/tiktok-7691957250642005269.jpg",
       videoUrl: "https://www.tiktok.com/@aexateeb/video/7691957250642005269?is_from_webapp=1&sender_device=pc&web_id=7661331262954751495", // Paste full URL: https://www.tiktok.com/@username/video/VIDEO_ID
     },
     {
       id: 6,
-      title: "TIKTOK PROJECT 2",
-      description: "Short-form video with engaging transitions.",
+      title: "PUBG Mobile Lobby Edit — Vol. 2",
+      description: "Premium lobby edit — clean outfit reveals, dynamic zooms and polished sound design.",
       thumbnail: "/thumbnails/tiktok-7689218512136457493.jpg",
       videoUrl: "https://www.tiktok.com/@aexateeb/video/7689218512136457493?is_from_webapp=1&sender_device=pc&web_id=7661331262954751495", // Paste full TikTok video URL here
     },
     {
       id: 7,
-      title: "TIKTOK PROJECT 3",
-      description: "TikTok motion graphics and effects.",
+      title: "PUBG Mobile Lobby Edit — Vol. 3",
+      description: "Stylish lobby edit with seamless transitions, light leaks and bass-boosted audio sync.",
       thumbnail: "/thumbnails/tiktok-7682893121885048084.jpg",
       videoUrl: "https://www.tiktok.com/@aexateeb/video/7682893121885048084?is_from_webapp=1&sender_device=pc&web_id=7661331262954751495", // Paste full TikTok video URL here
     },
     {
       id: 8,
-      title: "TIKTOK PROJECT 4",
-      description: "Cinematic short-form edit.",
+      title: "PUBG Mobile Lobby Edit — Vol. 4",
+      description: "High-end lobby showcase — cinematic angles, smooth velocity ramps and crisp detailing.",
       thumbnail: "/thumbnails/tiktok-7650653933618072853.jpg",
       videoUrl: "https://www.tiktok.com/@aexateeb/video/7650653933618072853?is_from_webapp=1&sender_device=pc&web_id=7661331262954751495", // Paste full TikTok video URL here
     },
