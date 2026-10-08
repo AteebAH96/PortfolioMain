@@ -99,12 +99,13 @@ export const projects = {
   web: [
     {
       id: 1,
-      title: "PROJECT 1",
-      description: "A modern web application built with the MERN stack.",
+      title: "EditDesk \u2014 Video Editing Client Portal",
+      description:
+        "Production client portal for a video-editing business. Clients register, place orders, track status, message the editor and receive delivery links; the admin runs the full pipeline from Pending to Delivered. JWT auth, MongoDB Atlas, serverless backend \u2014 live on Vercel.",
       image: "", // Add your project screenshot path
-      tech: ["React", "Node.js", "MongoDB", "Express"],
-      liveUrl: "#",
-      githubUrl: "#",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Vercel"],
+      liveUrl: "https://editdesk-e9er.vercel.app/",
+      githubUrl: "#", // repo is private \u2014 make it public to link it here
     },
     {
       id: 2,
