@@ -99,7 +99,7 @@ export const projects = {
   web: [
     {
       id: 1,
-      title: "EditDesk \u2014 Video Editing Client Portal",
+      title: "EditDesk",
       description:
         "Production client portal for a video-editing business. Clients register, place orders, track status, message the editor and receive delivery links; the admin runs the full pipeline from Pending to Delivered. JWT auth, MongoDB Atlas, serverless backend \u2014 live on Vercel.",
       image: "", // Add your project screenshot path
