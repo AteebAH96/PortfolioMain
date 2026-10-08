@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect } from "react";
-import { FaClapperboard } from "react-icons/fa6";
 import CustomCursor from "./components/CustomCursor";
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
 import MarqueeStrip from "./components/MarqueeStrip";
+import TeaserStrip from "./components/TeaserStrip";
 import SquigglyLine from "./components/SquigglyLine";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -50,8 +50,23 @@ export default function App() {
     applyTheme(next);
   };
 
-  const toggleMode = () => {
-    setMode((prev) => (prev === "developer" ? "editor" : "developer"));
+  const showProject = (projectMode, projectId) => {
+    setMode(projectMode);
+
+    const targetId = `project-${projectMode}-${projectId}`;
+    const startedAt = performance.now();
+    const scrollWhenReady = () => {
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+      if (performance.now() - startedAt < 1200) {
+        requestAnimationFrame(scrollWhenReady);
+      }
+    };
+
+    requestAnimationFrame(scrollWhenReady);
   };
 
   const handleLoadingComplete = useCallback(() => {
@@ -74,7 +89,8 @@ export default function App() {
 
       {/* Main content */}
       <main data-mode={mode}>
-        <Hero mode={mode} toggleMode={toggleMode} setMode={setMode} />
+        <Hero mode={mode} setMode={setMode} />
+        <TeaserStrip onSelect={showProject} />
         <MarqueeStrip />
         <About />
         <Skills />
@@ -85,18 +101,6 @@ export default function App() {
       </main>
 
       <Footer />
-
-      {/* Mode toggle pill */}
-      <button
-        className="mode-indicator"
-        onClick={toggleMode}
-        aria-label={`Switch to ${mode === "developer" ? "Video Editor" : "Developer"} mode`}
-        title="Click to toggle Developer / Video Editor mode"
-      >
-        <span className={`mode-dot ${mode === "developer" ? "dev" : "editor"}`} />
-        {mode === "editor" && <FaClapperboard size={15} color="var(--accent-pink)" aria-hidden="true" />}
-        <span>{mode === "developer" ? "⚡ Developer Mode" : "Editor Mode"}</span>
-      </button>
     </>
   );
 }

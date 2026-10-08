@@ -107,6 +107,7 @@ export default function Projects({ mode, setMode }) {
               {projects.web.map((proj, i) => (
                 <motion.div
                   className="project-card"
+                  id={`project-developer-${proj.id}`}
                   key={proj.id}
                   custom={i}
                   variants={cardVariants}
@@ -198,6 +199,7 @@ export default function Projects({ mode, setMode }) {
               {projects.video.map((vid, i) => (
                 <motion.div
                   className="video-card"
+                  id={`project-editor-${vid.id}`}
                   key={vid.id}
                   custom={i}
                   variants={cardVariants}

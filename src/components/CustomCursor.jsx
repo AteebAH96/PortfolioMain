@@ -44,7 +44,7 @@ export default function CustomCursor() {
   useEffect(() => {
     const onOver = (e) => {
       const target = e.target.closest(
-        "a, button, [role='button'], input, textarea, .skill-chip, .project-card, .video-card, .floating-icon, .nav-toggle, .theme-toggle, .mode-indicator, .contact-btn, .social-link, .project-tab, .polaroid, .timeline-clip"
+        "a, button, [role='button'], input, textarea, .skill-chip, .project-card, .video-card, .floating-icon, .nav-toggle, .theme-toggle, .contact-btn, .social-link, .project-tab, .polaroid, .timeline-clip"
       );
       setHovering(!!target);
     };

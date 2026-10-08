@@ -16,7 +16,7 @@ import { FaClapperboard } from "react-icons/fa6";
  * - Mobile responsive icon reduction
  * - Action buttons: "View Work" and "Contact Me"
  */
-export default function Hero({ mode, toggleMode }) {
+export default function Hero({ mode, setMode }) {
   const titles = [
     { prefix: "MERN Stack", italic: "Developer" },
     { prefix: "Cinematic", italic: "Video Editor" },
@@ -24,7 +24,6 @@ export default function Hero({ mode, toggleMode }) {
   ];
   const [titleIdx, setTitleIdx] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [nameHovered, setNameHovered] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -127,19 +126,30 @@ export default function Hero({ mode, toggleMode }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
       >
-        {/* Split Identity Interactive Name */}
-        <div
-          style={{ position: "relative", display: "inline-block", cursor: "pointer" }}
-          onClick={toggleMode}
-          onMouseEnter={() => setNameHovered(true)}
-          onMouseLeave={() => setNameHovered(false)}
-          title="Click to toggle Developer / Video Editor Mode"
-        >
-          <motion.div
-            initial={false}
-            animate={{ scale: nameHovered ? 1.03 : 1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+        <div className="hero-mode-toggle" role="group" aria-label="Choose portfolio mode">
+          <button
+            type="button"
+            className={mode === "developer" ? "active" : ""}
+            aria-pressed={mode === "developer"}
+            onClick={() => setMode("developer")}
           >
+            <FiCode aria-hidden="true" />
+            Developer
+          </button>
+          <button
+            type="button"
+            className={mode === "editor" ? "active" : ""}
+            aria-pressed={mode === "editor"}
+            onClick={() => setMode("editor")}
+          >
+            <FaClapperboard aria-hidden="true" />
+            Editor
+          </button>
+        </div>
+
+        {/* Split Identity Interactive Name */}
+        <div style={{ position: "relative", display: "inline-block" }}>
+          <div>
             <h1 className="hero-name">
               {mode === "developer" ? (
                 <span className="hero-name-gradient">
@@ -152,35 +162,6 @@ export default function Hero({ mode, toggleMode }) {
                 </span>
               )}
             </h1>
-          </motion.div>
-
-          {/* Interactive Mode Tooltip / Indicator */}
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "4px 12px",
-              borderRadius: 20,
-              background: "var(--glass-bg)",
-              border: "1px solid var(--border-color)",
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              color: "var(--accent-lavender)",
-              marginBottom: 12,
-              backdropFilter: "blur(10px)",
-              boxShadow: "var(--shadow-sm)",
-              transition: "all 0.25s ease",
-            }}
-          >
-            {mode === "developer" ? <FiCode size={13} /> : <FaClapperboard size={13} />}
-            <span>
-              Mode:{" "}
-              <strong>
-                {mode === "developer" ? "Developer" : "Video Editor"}
-              </strong>{" "}
-              (Click name to flip)
-            </span>
           </div>
         </div>
 
