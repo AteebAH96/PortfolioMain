@@ -17,7 +17,7 @@ export const personalInfo = {
   tagline:
     "I build modern web experiences & craft cinematic edits that turn heads.",
   profile:
-    "Passionate Web Developer and Video Editor with a strong eye for creativity and detail. I specialize in building modern, responsive websites and creating engaging video content that captures attention. I enjoy combining technical skills with creative ideas to deliver high-quality digital experiences.",
+    "I'm Ateeb \u2014 a MERN stack developer and video editor. I build modern web apps like EditDesk, my client portal for video professionals, and craft cinematic, high-energy edits for social media and digital platforms. I live where code meets cut: clean interfaces, sharp timing, and edits that turn heads.",
 };
 
 export const socialLinks = {
